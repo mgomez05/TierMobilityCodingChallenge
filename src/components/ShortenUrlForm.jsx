@@ -7,7 +7,10 @@ const ShortenUrlForm = () => {
 
     const onChange = useCallback(
         (e) => {
+
             // TODO: Set the component's new state based on the user's input
+            console.log(e.target.value)
+            setValue(value + e.target.value)
         },
         [
             /* TODO: Add necessary deps */
