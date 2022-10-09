@@ -27,6 +27,10 @@ const ShortenUrlForm = () => {
         (e) => {
             e.preventDefault();
 
+            // Reset the shortUrlDisplay and error message every time the user clicks the button
+            setErrorMessage('')
+            setShortUrlDisplay('')
+
             // Request that the url be turned into a shortUrl
             const requestOptions = {
                 method: 'POST',
