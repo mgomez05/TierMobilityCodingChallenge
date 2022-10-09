@@ -10,6 +10,7 @@ const ShortenUrlForm = () => {
 
     // Used for displaying error messages
     const [errorMessage, setErrorMessage] = useState('');
+    const [errorDetail, setErrorDetail] = useState('');
 
     const onChange = useCallback(
         (e) => {
@@ -53,7 +54,8 @@ const ShortenUrlForm = () => {
 
                 })    
                 .catch(error => {
-                    setErrorMessage("We're having technical difficulties at the moment sorry! Please try again later!")
+                    setErrorMessage("Couldn't connect to the server! Please try again later!")
+                    setErrorDetail(`${error}`)
                 })
                 
         },
@@ -78,6 +80,7 @@ const ShortenUrlForm = () => {
             {/* TODO: show below only when the url has been shortened and copied */}
             <div>{/* Show shortened url --- copied! */ shortUrlDisplay}</div>
             {errorMessage && (<p className="error"> {errorMessage} </p>)}
+            {errorDetail && (<p className="error"> {errorDetail} </p>)}
             
         </form>
     );
