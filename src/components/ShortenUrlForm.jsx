@@ -20,6 +20,22 @@ const ShortenUrlForm = () => {
     const onSubmit = useCallback(
         (e) => {
             e.preventDefault();
+
+            // Request that the url be turned into a shortUrl
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json'},
+                body: '{"realUrl": 5}',
+            };
+
+            fetch('http://localhost:8000/api/shortUrl/', requestOptions)
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Hi")
+                    console.log(data)
+                })    
+                .catch(error => console.log(error))
+                
             // TODO: shorten url and copy to clipboard
         },
         [
