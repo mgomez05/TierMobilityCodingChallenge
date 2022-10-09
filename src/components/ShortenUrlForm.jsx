@@ -45,7 +45,9 @@ const ShortenUrlForm = () => {
                     setShortUrlDisplay(shortUrlValue)
 
                 })    
-                .catch(error => console.log(error))
+                .catch(error => {
+                    setShortUrlDisplay("We're having technical difficulties at the moment, sorry! Please try again later!")
+                })
                 
         },
         [
