@@ -8,6 +8,9 @@ const ShortenUrlForm = () => {
     // Used for displaying the short url once it's copied to the clipboard
     const [shortUrlDisplay, setShortUrlDisplay] = useState('');
 
+    // Used for displaying error messages
+    const [errorMessage, setErrorMessage] = useState('');
+
     const onChange = useCallback(
         (e) => {
 
@@ -46,7 +49,7 @@ const ShortenUrlForm = () => {
 
                 })    
                 .catch(error => {
-                    setShortUrlDisplay("We're having technical difficulties at the moment, sorry! Please try again later!")
+                    setErrorMessage("We're having technical difficulties at the moment sorry! Please try again later!")
                 })
                 
         },
@@ -70,6 +73,8 @@ const ShortenUrlForm = () => {
             <input type="submit" value="Shorten and copy URL" />
             {/* TODO: show below only when the url has been shortened and copied */}
             <div>{/* Show shortened url --- copied! */ shortUrlDisplay}</div>
+            {errorMessage && (<p className="error"> {errorMessage} </p>)}
+            
         </form>
     );
 };
