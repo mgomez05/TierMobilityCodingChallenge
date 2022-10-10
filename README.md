@@ -2,7 +2,7 @@
 
 Hello to those viewing this repository. This repository is based off of the coding template provided by Tier Mobility and aims to solve the coding challenge specified below (see **Coding Challenge** below)
 
-This code goes hand in hand with a django server developed for completing the challenge. Please start running the backend specified by the repository `https://github.com/mgomez05/TierMobilityCodingChallengeBackend` to make sure the frontend runs correctly.
+This code goes hand in hand with a django server developed for completing the challenge. Please start running the backend specified by the [django server repository](https://github.com/mgomez05/TierMobilityCodingChallengeBackend) to make sure the frontend runs correctly.
 
 # **Coding Challenge** 🦅
 
