@@ -1,8 +1,8 @@
 # Coding Challenge Submission
 
-Hello to those viewing this repository. This repository is based off of the coding template provided by Tier Mobility and aims to solve the coding challenge specified below (see **Coding Challenge** below)
+Hello to those viewing this repository. This repository is based off of the coding template provided by Tier Mobility and aims to solve the [Tier Mobility Coding Challenge](https://github.com/TierMobility/frontend-challenge/tree/feat/fullstack-challange#coding-challenge-)
 
-This code goes hand in hand with a django server developed for completing the challenge. Please start running the backend specified by the [django server repository](https://github.com/mgomez05/TierMobilityCodingChallengeBackend) on the same machine as the frontend to make sure the web app runs correctly.
+This code goes hand in hand with a django server developed for completing the challenge. **Before you run the frontend**, please start running the backend specified by the [django server repository](https://github.com/mgomez05/TierMobilityCodingChallengeBackend) on the same machine as the frontend to make sure the web app runs correctly.
 
 # **Coding Challenge** 🦅
 
