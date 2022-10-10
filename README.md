@@ -5,7 +5,10 @@ Hello to those viewing this repository. This repository is based off of the codi
 This code goes hand in hand with a django server developed for completing the challenge. **Before you run the frontend**, please start running the backend specified by the [django server repository](https://github.com/mgomez05/TierMobilityCodingChallengeBackend) on the same machine as the frontend to make sure the web app runs correctly.
 
 Once you have the backend running, head to the **Installation & setup** section of this README to install the dependencies, and then in the project directory, run 
+
 #### `yarn start`
+
+This will run the app in development mode. Open http://localhost:3000 to view it in the browser.
 
 # **Coding Challenge** 🦅
 
