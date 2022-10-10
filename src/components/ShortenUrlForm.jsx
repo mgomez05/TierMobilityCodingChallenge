@@ -29,13 +29,16 @@ const ShortenUrlForm = () => {
             setErrorMessage('')
             setShortUrlDisplay('')
 
-            // Request that the url be turned into a shortUrl
+            // Send a request to the server to shorten the url
+            // - If the request succeeds, copy the url to the clipboard and
+            //   and show it below the textbox
+            // - Otherwise, show an error message and an error detail explaining
+            //   why we couldn't send the message
             const requestOptions = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json'},
                 body: JSON.stringify({ realUrl: value}),
             };
-
             fetch('http://localhost:8000/api/shortUrl/', requestOptions)
                 .then(response => response.json())
                 .then(data => {
@@ -75,8 +78,8 @@ const ShortenUrlForm = () => {
                 />
             </label>
             <input type="submit" value="Shorten and copy URL" />
-            {/* TODO: show below only when the url has been shortened and copied */}
-            <div>{/* Show shortened url --- copied! */ shortUrlDisplay}</div>
+            {/* We show the url below after it's been shortened and copied */}
+            <div>{shortUrlDisplay}</div>
             {errorMessage && (<p className="error"> {errorMessage} </p>)}
             {errorDetail && (<p className="error"> {errorDetail} </p>)}
             
