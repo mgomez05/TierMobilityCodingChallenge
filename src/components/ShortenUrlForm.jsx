@@ -19,9 +19,7 @@ const ShortenUrlForm = () => {
             console.log(e.target.value)
             setValue(value + e.target.value)
         },
-        [
-            /* TODO: Add necessary deps */
-        ],
+        [],
     );
 
     const onSubmit = useCallback(
@@ -36,7 +34,7 @@ const ShortenUrlForm = () => {
             const requestOptions = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json'},
-                body: '{"realUrl": 5}',
+                body: JSON.stringify({ realUrl: value}),
             };
 
             fetch('http://localhost:8000/api/shortUrl/', requestOptions)
@@ -60,7 +58,8 @@ const ShortenUrlForm = () => {
                 
         },
         [
-            /* TODO: necessary deps */
+            /* Include necessary deps */
+            value
         ],
     );
 
